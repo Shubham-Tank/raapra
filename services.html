@@ -1,0 +1,22 @@
+---
+layout: default
+title: raapra | services
+---
+
+<div class="main-services-container">
+	<div class="services">
+		<div class="services-container">
+			{% for service in site.data.services %}
+			<a href="/">
+				<div
+					data-aos="fade-left"
+					data-aos-delay="{{ forloop.index | times: 100 }}"
+					data-aos-duration="500"
+				>
+					<h2>{{ service.name }}</h2>
+				</div>
+			</a>
+			{% endfor %}
+		</div>
+	</div>
+</div>

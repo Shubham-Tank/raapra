@@ -1,0 +1,14 @@
+features:
+  - title: Feature 1
+    description: this is description of feature 1. this is description of feature 1
+  - title: Feature 2
+    description: this is description of feature 2. this is description of feature 2
+  - title: Feature 3
+    description: this is description of feature 3. this is description of feature 3
+achievements:
+  - title: Achievement 1
+    description: this is description of achievement 1. this is description of achievement 1.
+  - title: Achievement 2
+    description: this is description of achievement 2. this is description of achievement 2.
+  - title: Achievement 3
+    description: this is description of achievement 3. this is description of achievement 3.

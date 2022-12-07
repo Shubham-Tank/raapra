@@ -1,0 +1,124 @@
+body {
+	color: $text-dark !important;
+	background-color: #ebebeb !important;
+	min-height: 200vh;
+}
+
+.main-navbar {
+	background-color: $dark-color;
+
+	.navbar-nav {
+		margin: auto;
+
+		.nav-link {
+			position: relative;
+			width: fit-content;
+			margin-left: 1rem;
+			margin-right: 1rem;
+		}
+
+		.nav-link:not(.active):hover:before {
+			content: "";
+			height: 8px;
+			width: 8px;
+			background-color: $primary-background;
+			border-radius: 50%;
+			display: inline-block;
+			position: absolute;
+			bottom: 0px;
+			left: 48%;
+		}
+
+		.nav-link.active {
+			padding-bottom: 4px;
+			border-bottom: 2px solid $secondary-background;
+			border-radius: 5px;
+		}
+	}
+}
+
+.carousel-text {
+	bottom: 10%;
+	width: 100%;
+	text-align: center;
+	color: white;
+	position: absolute;
+	z-index: 10;
+	margin-left: auto;
+	margin-right: auto;
+
+	p {
+		margin: 0;
+		line-height: 3.5rem;
+		text-shadow: 0 0 1rem $dark-color;
+	}
+
+	.top {
+		font-size: 3rem;
+		font-weight: 700;
+	}
+
+	.middle {
+		font-size: 4rem;
+		font-weight: 600;
+	}
+
+	.bottom {
+		font-size: 2rem;
+		letter-spacing: 0.1rem;
+	}
+}
+
+.hero-section {
+	height: 600px;
+
+	.hero-overlay {
+		background-color: rgba(24, 26, 43, 0.626);
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		z-index: 3;
+	}
+
+	img {
+		object-fit: cover;
+		height: 600px;
+	}
+}
+
+.section-heading {
+	font-size: $font-section-heading;
+	font-weight: $font-bold;
+	margin-bottom: 4rem;
+}
+
+.best-feature-section,
+.achievements-section {
+	.container {
+		padding: 5rem;
+		padding-bottom: 8rem;
+
+		.feature-container,
+		.achievement-container {
+			gap: 6rem;
+
+			article {
+				color: white;
+				background-color: $dark-color;
+				padding: 2rem;
+				box-shadow: -0.7rem 0.7rem 0 $primary-background;
+			}
+		}
+
+		.achievement-container {
+			article {
+				box-shadow: -0.7rem 0.7rem 0 $secondary-background;
+			}
+		}
+	}
+}
+
+.achievements-section {
+	color: white;
+	background-color: $dark-color;
+}
