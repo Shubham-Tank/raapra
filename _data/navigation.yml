@@ -1,8 +1,8 @@
 - name: Home
   link: /
 - name: Services
-  link: /services.html
+  link: ./services.html
 - name: Clients
-  link: /clients.html
+  link: ./clients.html
 - name: About
-  link: /about.html
+  link: ./about.html
