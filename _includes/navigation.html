@@ -17,8 +17,7 @@
 				{% for item in site.data.navigation %}
 				<a
 					class="nav-link {% if page.url == item.link %} active {% endif %}"
-					href="{{ item.link }}"
-					data-page-url="{{page.url}}"
+					href="{{ item.production_link }}"
 				>
 					{{ item.name }}
 				</a>

@@ -1,8 +1,12 @@
 - name: Home
-  link: /raapra
+  link: /
+  production_link: /raapra
 - name: Services
-  link: /raapra/services.html
+  link: /services.html
+  production_link: /raapra/services.html
 - name: Clients
-  link: /raapra/clients.html
+  link: /clients.html
+  production_link: /raapra/clients.html
 - name: About
-  link: /raapra/about.html
+  link: /about.html
+  production_link: /raapra/about.html
