@@ -18,6 +18,7 @@
 				<a
 					class="nav-link {% if page.url == item.link %} active {% endif %}"
 					href="{{ item.link }}"
+					data-page-url="{{page.url}}"
 				>
 					{{ item.name }}
 				</a>
