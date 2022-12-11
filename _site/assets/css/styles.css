@@ -112,7 +112,7 @@ footer .footer-right .social-media .icon-container svg { height: 1.2rem; width: 
 
 footer .footer-right > .row:not(.footer-top-right) { min-height: 10%; }
 
-.main-services-container { position: absolute; width: 100vw; height: 94vh; background-color: #161616; overflow: hidden; }
+.main-services-container { position: absolute; width: 100vw; height: 94vh; background-color: #161616; overflow: hidden; z-index: 1000; }
 
 .services { display: flex; max-width: 1200px; margin: auto; margin-top: 5%; --s: 200px; /* size  */ --m: 30px; /* margin */ --f: calc(1.732 * var(--s) + 4 * var(--m) - 1px); }
 
