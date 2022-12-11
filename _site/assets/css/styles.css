@@ -114,11 +114,17 @@ footer .footer-right > .row:not(.footer-top-right) { min-height: 10%; }
 
 .main-services-container { position: absolute; width: 100vw; height: 94vh; background-color: #161616; overflow: hidden; z-index: 1000; }
 
+@media only screen and (max-width: 800px) { .main-services-container { overflow-y: scroll; } }
+
+main[data-page="raapra | services"] + footer { display: none; }
+
 .services { display: flex; max-width: 1200px; margin: auto; margin-top: 5%; --s: 200px; /* size  */ --m: 30px; /* margin */ --f: calc(1.732 * var(--s) + 4 * var(--m) - 1px); }
 
 .services-container { font-size: 0; }
 
 .services-container h2 { font-size: 1.6rem; height: 50px; margin-top: 40%; margin-left: 5%; margin-right: 4%; color: white; letter-spacing: 0.1rem; word-spacing: 0.3rem; line-height: 2rem; font-weight: 400; text-shadow: 0.2rem 0.2rem 0.4rem #311c1c; }
+
+@media only screen and (max-width: 1170px) { .services-container::before { border-left: none !important; } }
 
 .services-container div { cursor: pointer; width: var(--s); margin: var(--m); height: calc(var(--s) * 1.1547); display: inline-block; font-size: initial; clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%); background: #782222; margin-bottom: calc(var(--m) - var(--s) * 0.2885); }
 

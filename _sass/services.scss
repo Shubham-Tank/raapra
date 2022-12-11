@@ -5,6 +5,16 @@
 	background-color: $dark-color;
 	overflow: hidden;
 	z-index: 1000;
+
+	@include max(800px) {
+		overflow-y: scroll;
+	}
+}
+
+main[data-page="raapra | services"] {
+	& + footer {
+		display: none;
+	}
 }
 
 .services {
@@ -33,6 +43,12 @@
 		line-height: 2rem;
 		font-weight: 400;
 		text-shadow: 0.2rem 0.2rem 0.4rem rgb(49, 28, 28);
+	}
+
+	@include max(1170px) {
+		&::before {
+			border-left: none !important;
+		}
 	}
 }
 

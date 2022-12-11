@@ -21,7 +21,7 @@
 	</head>
 	<body>
 		<header>{% include navigation.html %}</header>
-		<main>{{ content }}</main>
+		<main data-page="{{ page.title }}">{{ content }}</main>
 		<footer>{% include footer.html %}</footer>
 		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 		<script>
