@@ -1,6 +1,18 @@
 ---
 ---
 
+@mixin max($val) {
+	@media only screen and (max-width: $val) {
+		@content;
+	}
+}
+
+@mixin min($val) {
+	@media only screen and (min-width: $val) {
+		@content;
+	}
+}
+
 @import "variables";
 @import "main";
 @import "services.scss";

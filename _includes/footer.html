@@ -1,0 +1,126 @@
+<div class="container">
+	<div class="row">
+		<form action="#" class="col-md-4 d-flex flex-column" method="POST">
+			<h3>CONTACT US</h3>
+			<input
+				class="form-field"
+				type="text"
+				name="name"
+				placeholder="Name"
+				required
+			/>
+			<input
+				class="form-field"
+				type="email"
+				name="email"
+				placeholder="Email"
+				required
+			/>
+			<input
+				type="tel"
+				name="phone"
+				class="form-field"
+				placeholder="Phone"
+				pattern="[0-9()#&+*-=.]+"
+				required
+			/>
+			<textarea placeholder="Message" rows="4" class="form-field"></textarea>
+			<button type="submit">Send</button>
+		</form>
+		<div class="col-md-7 row footer-right">
+			<div class="row footer-top-right mb-4">
+				<div class="quick-links col-md-4">
+					<h3>QUICK LINKS</h3>
+					<ul>
+						{% for item in site.data.navigation %}
+						<li>
+							<a href="#">{{ item.name }}</a>
+						</li>
+						{% endfor %}
+					</ul>
+				</div>
+				<div class="service-links col-md-8">
+					<h3>SERVICES</h3>
+					{% assign left_services = site.data.services | slice:0, 4 %} {% assign
+					right_services = site.data.services | slice:4, 4 %}
+					<div class="d-flex justify-content-around flex-wrap">
+						<ul>
+							{% for item in left_services %}
+							<li>
+								<a href="#">{{ item.name }}</a>
+							</li>
+							{% endfor %}
+						</ul>
+						<ul>
+							{% for item in right_services %}
+							<li>
+								<a href="#">{{ item.name }}</a>
+							</li>
+							{% endfor %}
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div
+					class="social-container"
+					class="col-md"
+					data-aos="zoom-in"
+					data-aos-delay="100"
+					data-aos-duration="500"
+					data-aos-offset="0"
+				>
+					<span class="icon-container"> {% include icons/location.svg %} </span>
+					<span>
+						312-Rajlaxmi Complex, Gondal Rd, Opp Bombay Hotel, Vijay Plot,
+						Bhakti Nagar, Rajkot, Gujarat 360002
+					</span>
+				</div>
+			</div>
+			<div class="row align-items-center">
+				<div
+					class="col-md-5 social-container"
+					class="social-container"
+					class="col-md"
+					data-aos="zoom-in"
+					data-aos-delay="300"
+					data-aos-duration="500"
+					data-aos-offset="0"
+				>
+					<span class="icon-container"> {% include icons/phone.svg %} </span>
+					<a href="tel:+911111111111"> +91 11111 11111 </a>
+				</div>
+				<div
+					class="col-md-7 social-container"
+					class="social-container"
+					class="col-md"
+					data-aos="zoom-in"
+					data-aos-delay="500"
+					data-aos-duration="500"
+					data-aos-offset="0"
+				>
+					<span class="icon-container"> {% include icons/email.svg %} </span>
+					<a href="mailto:info@raapra.in"> info@raapra.in </a>
+				</div>
+			</div>
+			<div class="row">
+				<div
+					class="social-container social-media"
+					class="social-container"
+					class="col-md"
+					data-aos="zoom-in"
+					data-aos-delay="600"
+					data-aos-duration="500"
+					data-aos-offset="0"
+				>
+					<span class="icon-container"> {% include icons/facebook.svg %} </span>
+					<span class="icon-container">
+						{% include icons/instagram.svg %}
+					</span>
+					<span class="icon-container"> {% include icons/twitter.svg %} </span>
+					<span> raapraofficial </span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

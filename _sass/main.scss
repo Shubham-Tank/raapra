@@ -1,7 +1,8 @@
 body {
 	color: $text-dark !important;
 	background-color: #ebebeb !important;
-	min-height: 200vh;
+	// min-height: 200vh;
+	overflow-x: hidden;
 }
 
 .main-navbar {
@@ -70,7 +71,7 @@ body {
 }
 
 .hero-section {
-	height: 600px;
+	height: 700px;
 
 	.hero-overlay {
 		background-color: rgba(24, 26, 43, 0.626);
@@ -82,7 +83,7 @@ body {
 
 	img {
 		object-fit: cover;
-		height: 600px;
+		height: 700px;
 	}
 }
 
@@ -95,7 +96,7 @@ body {
 .best-feature-section,
 .achievements-section {
 	.container {
-		padding: 5rem;
+		padding: 5rem 4rem;
 		padding-bottom: 8rem;
 
 		.feature-container,
@@ -110,6 +111,22 @@ body {
 			}
 		}
 
+		.feature-container {
+			article:hover {
+				transition: all 0.5s;
+				position: relative;
+				margin-left: 0.5rem;
+				box-shadow: -1.2rem 1.2rem 0 $primary-background;
+			}
+		}
+
+		.achievement-container {
+			article:hover {
+				transition: all 0.5s;
+				position: relative;
+			}
+		}
+
 		.achievement-container {
 			article {
 				box-shadow: -0.7rem 0.7rem 0 $secondary-background;
@@ -121,4 +138,190 @@ body {
 .achievements-section {
 	color: white;
 	background-color: $dark-color;
+}
+
+.testimonials-section {
+	padding: 5rem 2rem;
+	.carousel-inner {
+		width: 80%;
+		margin: auto;
+	}
+
+	#testimonials {
+		.carousel-control-prev-icon,
+		.carousel-control-next-icon {
+			background-image: url("/assets/images/icons/arrow-right.svg") !important;
+			stroke-width: 2;
+		}
+		.carousel-control-prev-icon {
+			transform: rotateZ(180deg);
+		}
+
+		.image-container {
+			display: flex;
+			justify-content: center;
+			padding-left: 2rem;
+			padding-right: 2rem;
+			img {
+				object-fit: cover;
+				width: 100%;
+				height: auto;
+				margin: auto;
+			}
+		}
+
+		.text-container {
+			border-left: 4px solid $primary-background;
+			padding-left: 0.5rem;
+		}
+	}
+}
+
+footer {
+	background-color: $dark-color;
+	padding: 5rem 2rem 3rem;
+
+	.container {
+		& > .row {
+			gap: 6rem;
+		}
+	}
+
+	form {
+		gap: 2rem;
+
+		h3 {
+			font-size: 1.4rem;
+			color: #ebebeb;
+			margin-bottom: 0;
+		}
+		.form-field {
+			padding: 0.5rem 1rem;
+			border: 3px solid $dark-color;
+			box-shadow: -0.4rem 0.4rem 0 $primary-background;
+			transition: all 0.5s;
+		}
+		.form-field:focus-visible {
+			outline: none;
+			box-shadow: -0.4rem 0 0 $primary-background;
+			border-width: 7px;
+		}
+
+		button {
+			align-self: flex-start;
+			padding: 0.5rem 3rem;
+			color: white;
+			background-color: $primary-background;
+			border: none;
+		}
+		button:active {
+			opacity: 0.9;
+		}
+	}
+
+	.footer-right {
+		padding-left: 3rem;
+		padding-right: 3rem;
+		gap: 2rem;
+
+		@include max(563px) {
+			gap: 0;
+		}
+
+		h3 {
+			font-size: 1.4rem;
+			color: #ebebeb;
+			margin-bottom: 1.4rem;
+		}
+
+		ul {
+			padding-left: 1rem;
+			list-style: none;
+
+			li {
+				margin-bottom: 0.6rem;
+				font-size: 0.9rem;
+				transition: all 0.4s;
+			}
+
+			a {
+				color: #b0b0b0;
+				text-decoration: none;
+				transition: padding 0.4s;
+			}
+
+			a:hover {
+				border-left: 2px solid $primary-background;
+				padding-left: 0.4rem;
+				color: #ebebeb;
+			}
+		}
+
+		.service-links {
+			.d-flex {
+				ul {
+					width: 170px;
+					// padding-left: 2rem;
+					// padding-right: 2rem;
+				}
+				@include max(563px) {
+					justify-content: start !important;
+				}
+			}
+
+			& > h3 {
+				@include min(563px) {
+					text-align: center;
+				}
+				@include max(563px) {
+					margin-top: 2rem;
+				}
+			}
+		}
+
+		.social-container {
+			font-size: 0.9rem;
+			display: flex;
+			align-items: center;
+			gap: 1rem;
+			color: #ebebeb;
+			padding-left: 1rem;
+			border-left: 3px solid $primary-background;
+
+			a {
+				color: #ebebeb;
+				text-decoration: none;
+			}
+
+			.icon-container {
+				padding: 0.2rem 0.4rem;
+				border-radius: 10px;
+				background-color: #ebebeb;
+				svg {
+					height: 1rem;
+					width: auto;
+				}
+				svg * {
+					fill: $primary-background;
+				}
+			}
+
+			@include max(563px) {
+				margin-bottom: 2rem;
+			}
+		}
+
+		.social-media {
+			.icon-container {
+				padding: 0.24rem 0.36rem;
+				svg {
+					height: 1.2rem;
+					width: auto;
+				}
+			}
+		}
+		& > .row:not(.footer-top-right) {
+			min-height: 10%;
+		}
+	}
 }
