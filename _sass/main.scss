@@ -266,6 +266,7 @@ footer {
 				}
 				@include max(563px) {
 					justify-content: start !important;
+					flex-wrap: wrap;
 				}
 			}
 
